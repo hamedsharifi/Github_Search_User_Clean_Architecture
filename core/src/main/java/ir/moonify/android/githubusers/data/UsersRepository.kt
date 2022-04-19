@@ -4,4 +4,6 @@ class UsersRepository(private val usersDataSource: UsersDataSource) {
 
     suspend fun searchUsers(query: String) = usersDataSource.search(query)
 
+    suspend fun getUserDetail(userName: String) = usersDataSource.get(userName)
+
 }
