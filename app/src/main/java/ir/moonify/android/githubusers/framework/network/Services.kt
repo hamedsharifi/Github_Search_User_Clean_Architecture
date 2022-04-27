@@ -6,6 +6,7 @@ import ir.moonify.android.githubusers.domain.UserList
 import ir.moonify.android.githubusers.util.Constants
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

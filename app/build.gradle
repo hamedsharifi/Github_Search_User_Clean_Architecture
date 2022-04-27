@@ -36,7 +36,7 @@ android {
             path file('src/main/cpp/CMakeLists.txt')
         }
     }
-    ndkVersion '23.0.7421159'
+    ndkVersion '24.0.8215888'
 
 }
 
@@ -82,12 +82,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
 
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
-    //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
-    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0"
 
 
 }
