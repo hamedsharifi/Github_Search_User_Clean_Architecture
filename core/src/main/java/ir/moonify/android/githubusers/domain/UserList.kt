@@ -1,7 +1,10 @@
 package ir.moonify.android.githubusers.domain
 
+import com.google.gson.annotations.SerializedName
+
 data class UserList(
-    var totalCount: Int? = null,
-    var incompleteResults: Boolean? = null,
-    var items: ArrayList<User> = arrayListOf()
+    @SerializedName("total_count"        ) var totalCount        : Int?             = null,
+    @SerializedName("incomplete_results" ) var incompleteResults : Boolean?         = null,
+    @SerializedName("items"              ) var items             : ArrayList<User> = arrayListOf()
+
 )

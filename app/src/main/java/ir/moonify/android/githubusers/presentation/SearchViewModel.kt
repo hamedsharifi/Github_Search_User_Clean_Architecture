@@ -30,7 +30,7 @@ class SearchViewModel(application: Application, useCases: UseCases) :
             val response = useCases.searchUser(username);
             withContext(Dispatchers.Main) {
                 userList.postValue(response)
-                 loading.value = false
+                loading.value = false
             }
         }
     }

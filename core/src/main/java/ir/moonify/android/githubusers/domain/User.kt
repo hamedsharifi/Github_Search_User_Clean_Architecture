@@ -1,30 +1,33 @@
 package ir.moonify.android.githubusers.domain
 
-import java.io.Serializable
+import com.google.gson.annotations.SerializedName
+
 
 data class User(
 
+    @SerializedName("login")
     var login: String? = null,
-    var id: Int? = null,
-    var nodeId: String? = null,
-    var avatarUrl: String? = null,
-    var gravatarId: String? = null,
-    var url: String? = null,
-    var htmlUrl: String? = null,
-    var followersUrl: String? = null,
-    var subscriptionsUrl: String? = null,
-    var organizationsUrl: String? = null,
-    var reposUrl: String? = null,
-    var receivedEventsUrl: String? = null,
-    var type: String? = null,
-    var score: Int? = null,
-    var followingUrl: String? = null,
-    var gistsUrl: String? = null,
-    var starredUrl: String? = null,
-    var eventsUrl: String? = null,
-    var siteAdmin: Boolean? = null
+    @SerializedName("id") var id: Int? = null,
+    @SerializedName("node_id") var nodeId: String? = null,
+    @SerializedName("avatar_url") var avatarUrl: String? = null,
+    @SerializedName("gravatar_id") var gravatarId: String? = null,
+    @SerializedName("url") var url: String? = null,
+    @SerializedName("html_url") var htmlUrl: String? = null,
+    @SerializedName("followers_url") var followersUrl: String? = null,
+    @SerializedName("following_url") var followingUrl: String? = null,
+    @SerializedName("gists_url") var gistsUrl: String? = null,
+    @SerializedName("starred_url") var starredUrl: String? = null,
+    @SerializedName("subscriptions_url") var subscriptionsUrl: String? = null,
+    @SerializedName("organizations_url") var organizationsUrl: String? = null,
+    @SerializedName("repos_url") var reposUrl: String? = null,
+    @SerializedName("events_url") var eventsUrl: String? = null,
+    @SerializedName("received_events_url") var receivedEventsUrl: String? = null,
+    @SerializedName("type") var type: String? = null,
+    @SerializedName("site_admin") var siteAdmin: Boolean? = null,
+    @SerializedName("score") var score: Int? = null
 
-)/*: Serializable {
+)
+/*: Serializable {
     companion object {
         val EMPTY = User()
     }
