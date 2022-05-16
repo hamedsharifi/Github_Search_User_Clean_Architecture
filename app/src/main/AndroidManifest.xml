@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moonify.android.githubusers">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name="ir.moonify.android.githubusers.framework.GithubUsersApplication"
         android:icon="@mipmap/ic_launcher"

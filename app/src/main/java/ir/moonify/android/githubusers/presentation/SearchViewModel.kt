@@ -1,6 +1,7 @@
 package ir.moonify.android.githubusers.presentation
 
 import android.app.Application
+import android.content.Intent
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import ir.moonify.android.githubusers.domain.UserList
@@ -26,7 +27,7 @@ class SearchViewModel(application: Application, useCases: UseCases) :
 
     fun searchUser(username: String) {
         loading.value = true
-        viewModelScope.launch {
+        viewModelScope.launch(exceptionHandler) {
             val response = useCases.searchUser(username);
             withContext(Dispatchers.Main) {
                 userList.postValue(response)
@@ -34,6 +35,5 @@ class SearchViewModel(application: Application, useCases: UseCases) :
             }
         }
     }
-
 
 }

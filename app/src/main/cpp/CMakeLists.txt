@@ -17,4 +17,4 @@ add_library( # Specifies the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-        /home/handi/Projects/Github_Search_User_Clean_Architecture/app/src/main/cpp/native-lib.cpp)
+        /home/handi/StudioProjects/Github_Search_User_Clean_Architecture/app/src/main/cpp/native-lib.cpp)

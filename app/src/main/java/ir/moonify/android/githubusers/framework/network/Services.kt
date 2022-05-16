@@ -24,12 +24,12 @@ interface Services {
     companion object {
         var retrofitService: Services? = null
         var okHttpClient: OkHttpClient = OkHttpClient().newBuilder()
-            .certificatePinner(
+            /*.certificatePinner(
                 CertificatePinner.Builder()
                     // api.github.com public key
                     .add("api.github.com", "sha256/WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=")
                     .build()
-            )
+            )*/
             .build()
 
         fun getInstance(): Services {

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Search Github Users</string>
+    <string name="empty_message">Search user and press search button</string>
+    <string name="score_is">Score : %1$s</string>
 
 
 </resources>

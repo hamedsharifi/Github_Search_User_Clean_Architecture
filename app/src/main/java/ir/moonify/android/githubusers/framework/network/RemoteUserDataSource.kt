@@ -6,6 +6,12 @@ import ir.moonify.android.githubusers.domain.UserList
 
 class RemoteUserDataSource constructor(private val retrofitService: Services) : UsersDataSource {
 
+    companion object {
+        init {
+            System.loadLibrary("native-lib")
+        }
+    }
+
     override suspend fun search(query: String): UserList {
         return retrofitService.searchUser(getSearchUrl(), query)
     }
@@ -16,6 +22,6 @@ class RemoteUserDataSource constructor(private val retrofitService: Services) : 
 
 
     // Hiding API URLs
-    external fun getSearchUrl(): String?
-    external fun getUserUrl(): String?
+    external fun getSearchUrl(): String
+    external fun getUserUrl(): String
 }
