@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Search Github Users</string>
     <string name="empty_message">Search user and press search button</string>
+    <string name="company">Company</string>
+    <string name="blog">Blog</string>
+    <string name="location">Location</string>
+    <string name="email">Email</string>
+    <string name="bio">Bio</string>
+    <string name="twitter">Twitter</string>
     <string name="score_is">Score : %1$s</string>
 
 

@@ -71,7 +71,7 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun getAdapter(users: MutableList<User>): UsersRecyclerViewAdapter {
-        return UsersRecyclerViewAdapter(users)
+        return UsersRecyclerViewAdapter(this, users)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
