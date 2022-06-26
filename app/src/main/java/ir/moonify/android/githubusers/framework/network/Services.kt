@@ -1,6 +1,6 @@
 package ir.moonify.android.githubusers.framework.network
 
-import io.reactivex.Single
+
 import ir.moonify.android.githubusers.domain.UserDetail
 import ir.moonify.android.githubusers.domain.UserList
 import ir.moonify.android.githubusers.util.Constants

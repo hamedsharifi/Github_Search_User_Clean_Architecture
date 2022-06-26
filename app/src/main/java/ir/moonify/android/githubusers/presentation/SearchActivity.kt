@@ -20,7 +20,7 @@ import ir.moonify.android.githubusers.framework.BaseViewModelFactory
 class SearchActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySearchBinding
-    lateinit var viewModel: SearchViewModel
+    private lateinit var viewModel: SearchViewModel
     private lateinit var adapter: UsersRecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
