@@ -56,13 +56,6 @@ dependencies {
     implementation libs.coroutinesAndroid
     implementation libs.coroutines
 
-
-    implementation libs.junit
-    implementation libs.archCoreTesting
-    implementation libs.mockk
-    implementation libs.coroutinesTest
-    testImplementation(libs.mockwebserver)
-
     //Retrofit
     implementation libs.retrofit
     implementation libs.converterGson
@@ -75,5 +68,15 @@ dependencies {
 
     implementation libs.liveDataKtx
     implementation libs.persistentsearchview
+
+    // Koin
+    implementation libs.koinAndroid
+    implementation libs.koinTest
+
+    implementation libs.junit
+    implementation libs.archCoreTesting
+    implementation libs.mockk
+    implementation libs.coroutinesTest
+    testImplementation(libs.mockwebserver)
 
 }

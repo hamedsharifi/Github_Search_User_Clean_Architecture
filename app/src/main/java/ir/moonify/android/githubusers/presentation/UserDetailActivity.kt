@@ -7,8 +7,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.moonify.android.githubusers.databinding.ActivityUserDetailBinding
-import ir.moonify.android.githubusers.framework.BaseViewModelFactory
 import ir.moonify.android.githubusers.util.Constants
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class UserDetailActivity : AppCompatActivity() {
 
@@ -21,8 +21,7 @@ class UserDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        viewModel =
-            ViewModelProvider(this, BaseViewModelFactory).get(UserDetailViewModel::class.java)
+        viewModel = getViewModel()
 
         intent.getStringExtra(Constants.USER)?.let {
             setTitle("@$it")

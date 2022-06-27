@@ -1,20 +1,17 @@
 package ir.moonify.android.githubusers.presentation
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.moonify.android.githubusers.R
 import com.moonify.android.githubusers.databinding.ActivitySearchBinding
 import com.paulrybitskyi.persistentsearchview.utils.VoiceRecognitionDelegate
 import ir.moonify.android.githubusers.domain.User
-import ir.moonify.android.githubusers.framework.BaseViewModelFactory
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 
 class SearchActivity : AppCompatActivity() {
@@ -27,7 +24,7 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        viewModel = ViewModelProvider(this, BaseViewModelFactory).get(SearchViewModel::class.java)
+        viewModel = getViewModel()
         initRecyclerView()
         with(binding.persistentSearchView) {
             setOnLeftBtnClickListener {

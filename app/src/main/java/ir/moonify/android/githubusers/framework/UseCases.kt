@@ -1,9 +1,9 @@
 package ir.moonify.android.githubusers.framework
 
-import ir.moonify.android.githubusers.usecases.GetUserDetail
-import ir.moonify.android.githubusers.usecases.SearchUser
+import ir.moonify.android.githubusers.usecases.GetUserDetailUseCase
+import ir.moonify.android.githubusers.usecases.SearchUserUseCase
 
 data class UseCases(
-    val searchUser: SearchUser,
-    val getUserDetail: GetUserDetail
+    val searchUserUseCase: SearchUserUseCase,
+    val getUserDetailUseCase: GetUserDetailUseCase
 )

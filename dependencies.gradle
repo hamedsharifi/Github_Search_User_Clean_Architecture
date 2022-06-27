@@ -118,7 +118,7 @@ ext.libs = [
         archCoreTesting            : "androidx.arch.core:core-testing:$versions.androidArchitectureTesting",
         coroutinesTest             : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines",
         googleTruth                : "com.google.truth:truth:$versions.truth",
-        mockwebserver              : "com.squareup.okhttp3:mockwebserver:$versions.truth",
+        mockwebserver              : "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver",
         persistentsearchview       : "com.paulrybitskyi.persistentsearchview:persistentsearchview:$versions.persistentsearchview"
 ]
 

@@ -3,8 +3,8 @@ package ir.moonify.android.githubusers
 import ir.moonify.android.githubusers.data.UsersRepository
 import ir.moonify.android.githubusers.framework.UseCases
 import ir.moonify.android.githubusers.framework.network.Services
-import ir.moonify.android.githubusers.usecases.GetUserDetail
-import ir.moonify.android.githubusers.usecases.SearchUser
+import ir.moonify.android.githubusers.usecases.GetUserDetailUseCase
+import ir.moonify.android.githubusers.usecases.SearchUserUseCase
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
@@ -38,7 +38,7 @@ class SearchViewModelTest {
         .build()
         .create(Services::class.java)
     private val usersRepository = UsersRepository(TestRemoteUserDataSource(api))
-    val useCases: UseCases = UseCases(SearchUser(usersRepository), GetUserDetail(usersRepository))
+    val useCases: UseCases = UseCases(SearchUserUseCase(usersRepository), GetUserDetailUseCase(usersRepository))
 
     @Before
     fun setUp() {
@@ -64,7 +64,7 @@ class SearchViewModelTest {
             )
         )
         runBlocking {
-            val result = useCases.searchUser("hamedsharifi")
+            val result = useCases.searchUserUseCase("hamedsharifi")
             Assert.assertNotNull(result)
         }
     }
